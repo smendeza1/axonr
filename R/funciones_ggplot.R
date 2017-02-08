@@ -5,13 +5,13 @@
 
 ggaxon <- function(grafico, fuente) {
 
-    img <- readPNG(source = "man/axon.png")
+    img <- png::readPNG(source = "man/axon.png")
 
     texto <- paste0("Fuente: ", fuente)
-    my_g <- grobTree(rectGrob(gp = gpar(fill = "white", col = "white")), textGrob(texto, x = 0.99, hjust = 1, vjust = 0.5,
-        gp = gpar(col = "#737373", fontfamily = "Open Sans", fontsize = 9)), rasterGrob(img, x = 0.01, hjust = 0))
+    my_g <- grid::grobTree(rectGrob(gp = grid::gpar(fill = "white", col = "white")), grid::textGrob(texto, x = 0.99, hjust = 1, vjust = 0.5,
+        gp = grid::gpar(col = "#737373", fontfamily = "Open Sans", fontsize = 9)), grid::rasterGrob(img, x = 0.01, hjust = 0))
 
-    grid.arrange(grafico, my_g, heights = c(1, 0.05))
+    gridExtra::grid.arrange(grafico, my_g, heights = c(1, 0.05))
 
 }
 
