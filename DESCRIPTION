@@ -1,0 +1,11 @@
+Package: axonr
+Type: Package
+Title: Funciones de soporte para los trabajos en axon
+Version: 0.1.0
+Author: Saul Mendez
+Maintainer: <smendez@axoncg.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: None
+Encoding: UTF-8
+LazyData: true
